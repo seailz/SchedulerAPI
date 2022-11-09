@@ -30,5 +30,16 @@ SchedulerAPI.scheduleAfter(() -> {
 }, 1000);
 ```
 
-This method will schedule a task after a specific amount of time.
+This method will execute a task after a specific amount of time.
+
+## Schedule After if Condition
+```java
+boolean condition = true;
+SchedulerAPI.scheduleAfter(() -> {
+   System.out.println("Hello world, it's been a second!");
+}, 1000, () -> condition);
+```
+
+This method will execute a task after a specific amount of time if a condition is true.
+
 
